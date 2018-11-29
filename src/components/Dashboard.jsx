@@ -10,7 +10,7 @@ import React, { Component } from "react";
 class App extends Component {
   render() {
     return (
-      <p1>dashboard</p1>
+      <p>dashboard</p>
     );
   }
 }
