@@ -8,7 +8,7 @@
     "start": "node index.js",
     "build": "babel-node ./node_modules/webpack/bin/webpack.js --config webpack.config.prod.js",
     "start:dev": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack.config.dev.js --hot --color --open",
-    "test": "jest --verbose --coverage",
+    "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
     "test:coverage": "jest --verbose --coverage"
