@@ -1,0 +1,20 @@
+{
+  "name": "mydiary_react",
+  "version": "1.0.0",
+  "description": "Conversion of my diary app to react application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obulaworld/mydiary_react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obulaworld/mydiary_react/issues"
+  },
+  "homepage": "https://github.com/obulaworld/mydiary_react#readme"
+}
