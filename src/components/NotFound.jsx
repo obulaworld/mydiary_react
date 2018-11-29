@@ -8,7 +8,7 @@ import React, { Component } from "react";
 class App extends Component {
   render() {
     return (
-      <p1>Not Found</p1>
+      <p>Not Found</p>
     );
   }
 }

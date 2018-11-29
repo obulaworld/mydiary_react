@@ -2,15 +2,12 @@
 import { createStore, compose, applyMiddleware } from "redux";
 import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
-
-// reducer
+ // reducer
 import rootReducer from "../reducers";
-
-const logger = createLogger({
+ const logger = createLogger({
   collapsed: true
 });
-
-/**
+ /**
  * @desc setup redux store
  */
 const configureStore = () =>
