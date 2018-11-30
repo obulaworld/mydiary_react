@@ -13,7 +13,7 @@ import NotFound from './NotFound';
 import View from './View';
 import Signup from '../containers/Signup/Signup';
 import Login from '../containers/Login/Login';
-
+import Logout from './Logout/Logout';
 
 /**
  * @desc handles routing
@@ -26,6 +26,7 @@ const Routes = () => (
       <Route exact path='/hi/:id' component={View} />
       <Route exact path='/register' component={Signup} />
       <Route exact path='/login' component={Login} />
+      <Route exact path='/logout' component={Logout} />
       <AuthenticatedRoute exact path='/dashboard' component={Dashboard} />
       <Route component={NotFound} />
     </Switch>
