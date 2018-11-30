@@ -5,15 +5,24 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/**/*.js src/**/*.jsx --fix",
-    "start": "npm run start:dev",
+    "start": "node app.js",
     "build": "babel-node ./node_modules/webpack/bin/webpack.js --config webpack.config.prod.js",
     "start:dev": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack.config.dev.js --hot --color --open",
     "test": "jest",
+    "postinstall": "yarn build",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test:coverage": "jest --verbose --coverage"
   },
   "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html",
+      "lcov",
+      "text"
+    ],
     "transform": {
       ".js$": "babel-7-jest",
       ".jsx$": "babel-7-jest"
@@ -94,6 +103,7 @@
     "classnames": "^2.2.6",
     "compression": "^1.7.3",
     "copy-webpack-plugin": "^4.6.0",
+    "coveralls": "^3.0.2",
     "dotenv": "^6.1.0",
     "dotenv-webpack": "^1.5.7",
     "eslint": "^5.9.0",

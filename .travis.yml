@@ -13,3 +13,4 @@ after_script:
 script:
 - yarn build
 - yarn test -u
+- yarn coveralls
