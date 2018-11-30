@@ -1,10 +1,16 @@
 // redux library
 import { combineReducers } from "redux";
-// Moduler Importations
-import score from "./example";
+
+// Reducers
+import signup from "./signup";
+import auth from "./auth";
+import loading from './loading'
+
 /**
  * @desc combines all the reducers
  */
 export default combineReducers({
-  score
+  signup,
+  auth,
+  loading
 });

@@ -18,7 +18,7 @@ class MainHeader extends Component {
           <div className="inner">
             <div id="branding">
               <a href="/">
-                <img src="../../src/favicon.png" alt="My diary Logo" />
+                <img src="/images/favicon.png" alt="My diary Logo" />
               </a>
             </div>
             <div id="links">
