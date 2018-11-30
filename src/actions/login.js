@@ -4,11 +4,11 @@ import swal from 'sweetalert';
 
 // actionType
 import {
-  SIGNUP_PROCESSING,
-  SIGNUP_SUCCESS,
-  SIGNUP_FAILURE,
-  SIGNUP_ERROR_CLEARED,
-} from '../action_types/signup';
+  LOGIN_PROCESSING,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
+  LOGIN_ERROR_CLEARED,
+} from '../action_types/login';
 
 import history from '../history';
 
@@ -20,9 +20,9 @@ import { loaderOff } from '../actions/toggleLoader';
  * @desc checking login loading
  * @returns {object} type
  */
-export function signupPosting(data) {
+export function loginPosting(data) {
   return {
-    type: SIGNUP_PROCESSING,
+    type: LOGIN_PROCESSING,
     payload: data,
   };
 }
@@ -31,9 +31,9 @@ export function signupPosting(data) {
  * @desc checking successful login
  * @returns {object} type
  */
-export function signupSuccess(data) {
+export function loginSuccess(data) {
   return {
-    type: SIGNUP_SUCCESS,
+    type: LOGIN_SUCCESS,
     payload: data,
   };
 }
@@ -42,9 +42,9 @@ export function signupSuccess(data) {
  * @desc checking unsuccessful login
  * @returns {object} type
  */
-export function signupFailure(data) {
+export function loginFailure(data) {
   return {
-    type: SIGNUP_FAILURE,
+    type: LOGIN_FAILURE,
     payload: data,
   };
 }
@@ -55,26 +55,25 @@ export function signupFailure(data) {
  */
 export function clearError() {
   return {
-    type: SIGNUP_ERROR_CLEARED,
+    type: LOGIN_ERROR_CLEARED,
   };
 }
 
-export const userSignupRequest = (details) => (dispatch) => {
-  dispatch(signupPosting(true));
+export const userLoginRequest = (details) => (dispatch) => {
+  dispatch(loginPosting(true));
   return http
-    .post('https://my-diary-challenge.herokuapp.com/api/v1/auth/signup', details)
+    .post('https://my-diary-challenge.herokuapp.com/api/v1/auth/login', details)
     .then((payload) => {
-      console.log('am back', payload);
       const { user, token } = payload.data;
       localStorage.setItem('diaryToken', token);
-      dispatch(signupSuccess(payload.data));
+      dispatch(loginSuccess(payload.data));
       dispatch(authenticateUser(user));
-      swal('Success','You have been successfully registered', 'success' )
+      swal('Success','You have been successfully logged in', 'success' )
       history.push('/dashboard');
     })
     .catch((err) => {
       dispatch(loaderOff(false))
-      swal('Error',err.response.data.message, 'error' )
-      dispatch(signupFailure(err.response.data.message));
+      swal('Error', err.response.data.message, 'error' )
+      dispatch(loginFailure(err.response.data.message));
     });
 };

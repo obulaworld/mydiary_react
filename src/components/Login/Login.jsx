@@ -5,8 +5,8 @@ import React, { Component } from "react";
 import Header from "../Reusables/Header";
 
 // scss
-import "../../../public/scss/register.scss";
-import "../../../public/scss/_regist.scss";
+import "../../../public/scss/login.scss";
+import "../../../public/scss/_login.scss";
 
 //third party libraries
 import { css } from "react-emotion";
@@ -25,7 +25,6 @@ const override = css`
 */
 class Signup extends Component {
   state = {
-    name: "",
     email: "",
     password: "",
   };
@@ -34,12 +33,11 @@ class Signup extends Component {
     event.preventDefault();
     this.setState({ loading: true });
     const details = {
-      name: this.state.name,
       email: this.state.email,
       password: this.state.password
     };
     this.props.loaderOn();
-    this.props.signup(details);
+    this.props.login(details);
   };
 
   onChange = event => {
@@ -51,37 +49,24 @@ class Signup extends Component {
     return (
       <React.Fragment>
         <Header />
-        <section className="container" align="center">
+        <section className="container">
           <div className="card">
             <div className="inner-card">
               <div className="left-card">
                 <a href="index.html">
-                  <img src="/images/favicon.png" />
+                  <img src="./images/favicon.png" />
                 </a>
-                <h1>Get Your MyDiary Account</h1>
+                <h2>Login To MyDiary</h2>
                 <div id="diary-image">
-                  <img id="image-dairy" src="/images/diary.png" />
+                  <img id="image-dairy" src="images/diary.png" />
                 </div>
               </div>
               <div className="right-card">
                 <form onSubmit={this.onSubmit}>
                   <div id="diary-image2">
                     <a href="/">
-                      <img src="/images/favicon.png" />
+                      <img src="./images/favicon.png" />
                     </a>
-                  </div>
-                  <div>
-                    <label htmlFor="name">Full Name:</label>
-                    <br />
-                    <input
-                      type="text"
-                      id="name"
-                      required
-                      name="name"
-                      className="firstInput"
-                      value={this.state.name}
-                      onChange={this.onChange}
-                    />
                   </div>
                   <div>
                     <label htmlFor="email">E-Mail Address:</label>
@@ -89,33 +74,29 @@ class Signup extends Component {
                     <input
                       type="email"
                       id="email"
-                      required
                       name="email"
-                      value={this.state.email}
+                      required
                       onChange={this.onChange}
                     />
                   </div>
                   <div>
-                    <div className="go-left">
-                      <label htmlFor="password">Password:</label>
-                      <br />
-                      <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        required
-                        value={this.state.register_password}
-                        onChange={this.onChange}
-                      />
-                    </div>
+                    <label htmlFor="password">Password:</label>
+                    <br />
+                    <input
+                      type="password"
+                      id="password"
+                      className="firstInput"
+                      name="password"
+                      required
+                      onChange={this.onChange}
+                    />
                   </div>
-                  <div align="center" className="register-button">
-                    <button type="submit" id="register">
-                      Register
+                  <div align="center" className="login-button">
+                    <button type="submit" id="login" >
+                      Log In
                     </button>
                   </div>
-
-                  <div align="center">
+                  <div>
                     <FadeLoader
                       className={override}
                       sizeUnit={"px"}
@@ -125,11 +106,16 @@ class Signup extends Component {
                     />
                   </div>
                 </form>
+                <h3>
+                  <a href="" className="turn">
+                    Forgot password?
+                  </a>
+                </h3>
                 <hr />
                 <h3>
-                  Have an account?{" "}
-                  <a href="login.html" className="turn">
-                    Login
+                  New to MyDiary?{" "}
+                  <a href="/register" className="turn">
+                    SignUp Here
                   </a>
                 </h3>
               </div>
