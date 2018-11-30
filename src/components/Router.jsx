@@ -7,7 +7,7 @@ import history from '../history';
 
  // components
 import AuthenticatedRoute from './AuthRoute';
-import Home from './Home';
+import Home from './Home/Home';
 import Dashboard from './Dashboard';
 import NotFound from './NotFound';
 import View from './View';
