@@ -7,10 +7,6 @@ import React, { Component } from "react";
 */
 class MainHeader extends Component {
 
-  handleLogout = () => {
-
-  }
-
   render() {
     return (
       <header>
@@ -36,7 +32,7 @@ class MainHeader extends Component {
                   <a href="/profile">My Profile</a>
                 </li>
                 <li className="change1" onClick={this.handleLogout}>
-                  Logout
+                <a href="/logout">Logout</a>
                 </li>
                 <li className="change2">
                   <label htmlFor="offcanvas" className="toggler">
