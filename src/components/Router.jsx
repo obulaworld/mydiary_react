@@ -8,7 +8,7 @@ import history from '../history';
  // components
 import AuthenticatedRoute from './AuthRoute';
 import Home from './Home/Home';
-import Dashboard from './Dashboard';
+import Dashboard from '../containers/Dashboard/Dashboard';
 import NotFound from './NotFound';
 import View from './View';
 import Signup from '../containers/Signup/Signup';
