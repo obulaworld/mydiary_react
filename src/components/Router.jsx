@@ -2,7 +2,7 @@
 import React from 'react';
 
  // third party library
-import { Switch, Route, Router  } from 'react-router-dom';
+import { Switch, Route, BrowserRouter  } from 'react-router-dom';
 import history from '../history';
 
  // components
@@ -17,13 +17,13 @@ import View from './View';
  * @returns {object} routes
  */
 const Routes = () => (
-  <Router history={ history }>
+  <BrowserRouter history={ history }>
     <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/hi/:id' component={View} />
       <AuthenticatedRoute exact path='/dashboard' component={Dashboard} />
       <Route component={NotFound} />
     </Switch>
-  </Router>
+  </BrowserRouter>
 );
  export default Routes;

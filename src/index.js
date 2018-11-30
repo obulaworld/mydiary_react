@@ -10,7 +10,7 @@ import configureStore from "../src/store/storeConfig";
 import Router from "./components/Router";
 
 // scss
-import '../public/scss/index.scss';
+import "../public/scss/index.scss";
 
 const store = configureStore();
 
@@ -21,3 +21,4 @@ ReactDOM.render(
 
   document.getElementById("root")
 );
+

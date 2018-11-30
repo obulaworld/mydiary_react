@@ -14,11 +14,11 @@ const port = process.env.PORT || 8001;
 app.use(compression());
 
 // set static file directory
-app.use(express.static('build'));
+app.use(express.static('dist'));
 
 // catch all request at index page
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 // bind port
