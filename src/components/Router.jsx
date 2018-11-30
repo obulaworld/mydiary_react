@@ -12,6 +12,7 @@ import Dashboard from './Dashboard';
 import NotFound from './NotFound';
 import View from './View';
 import Signup from '../containers/Signup/Signup';
+import Login from '../containers/Login/Login';
 
 
 /**
@@ -24,6 +25,7 @@ const Routes = () => (
       <Route exact path='/' component={Home} />
       <Route exact path='/hi/:id' component={View} />
       <Route exact path='/register' component={Signup} />
+      <Route exact path='/login' component={Login} />
       <AuthenticatedRoute exact path='/dashboard' component={Dashboard} />
       <Route component={NotFound} />
     </Switch>
