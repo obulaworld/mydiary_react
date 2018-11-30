@@ -34,32 +34,32 @@ class Home extends Component {
               <Feature
                 body="It doesn’t have a fancy or sophisticated web interface, but it is extremely user-friendly and easy-to-use and it has Access from anywhere with internet"
                 header="Easy"
-                imageUrl="../../../public/images/book1.jpg"
+                imageUrl="/images/book1.jpg"
               />
               <Feature
                 body="It doesn’t have a fancy or sophisticated web interface, but it is extremely user-friendly and easy-to-use and it has Access from anywhere with internet"
                 header="Easy"
-                imageUrl="../../../public/images/book2.jpg"
+                imageUrl="/images/book2.jpg"
               />
               <Feature
                 body="It doesn’t have a fancy or sophisticated web interface, but it is extremely user-friendly and easy-to-use and it has Access from anywhere with internet"
                 header="Easy"
-                imageUrl="../../../public/images/book3.jpg"
+                imageUrl="/images/book3.jpg"
               />
               <Feature
                 body="It doesn’t have a fancy or sophisticated web interface, but it is extremely user-friendly and easy-to-use and it has Access from anywhere with internet"
                 header="Easy"
-                imageUrl="../../../public/images/book4.jpg"
+                imageUrl="/images/book4.jpg"
               />
               <Feature
                 body="It doesn’t have a fancy or sophisticated web interface, but it is extremely user-friendly and easy-to-use and it has Access from anywhere with internet"
                 header="Easy"
-                imageUrl="../../../public/images/book.jpg"
+                imageUrl="/images/book.jpg"
               />
               <Feature
                 body="It doesn’t have a fancy or sophisticated web interface, but it is extremely user-friendly and easy-to-use and it has Access from anywhere with internet"
                 header="Easy"
-                imageUrl="../../../public/images/book.jpg"
+                imageUrl="/images/book.jpg"
               />
             </div>
           </section>
