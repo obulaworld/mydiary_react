@@ -1,11 +1,11 @@
-
-@media screen and (min-width: 550px){
-    #boxes .box{
-        width:42%;
+@media screen and (min-width: 550px) {
+    #boxes .box {
+        width: 42%;
         height: 100%;
     }
 }
-@media screen and (min-width: 800px){
+
+@media screen and (min-width: 800px) {
     #boxes .box {
         width: 28%;
         height: 100%;
@@ -13,7 +13,7 @@
 }
 
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 900px) {
     body {
         width: 900px;
         margin-right: auto;
@@ -95,6 +95,14 @@ nav {
         margin-bottom: 20px;
         margin-right: 20px;
     }
+}
+
+h1 {
+    color: #000000 !important;
+}
+
+.middle{
+    color: #000000 !important;
 }
 
 .container {

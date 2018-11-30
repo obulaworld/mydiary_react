@@ -64,7 +64,6 @@ export const userSignupRequest = (details) => (dispatch) => {
   return http
     .post('https://my-diary-challenge.herokuapp.com/api/v1/auth/signup', details)
     .then((payload) => {
-      console.log('am back', payload);
       const { user, token } = payload.data;
       localStorage.setItem('diaryToken', token);
       dispatch(signupSuccess(payload.data));

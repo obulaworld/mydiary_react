@@ -16,6 +16,12 @@ const initialState = {
     user: {},
     isAuth: false
   },
+  entries: {
+    processing: false,
+    error: "",
+    message: "",
+    entries: []
+  },
   loading: {
     loading: false
   }
