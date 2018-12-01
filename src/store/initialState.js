@@ -31,6 +31,12 @@ const initialState = {
   },
   loading: {
     loading: false
+  },
+  entry: {
+    processing: false,
+    error: "",
+    message: "",
+    entry: {}
   }
 };
 export default initialState;
