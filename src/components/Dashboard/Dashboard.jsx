@@ -2,8 +2,7 @@
 import React, { Component } from "react";
 
 //third party libraries
-import { css } from "react-emotion";
-import { PropagateLoader } from "react-spinners";
+import history from '../../../src/history';
 
 // scss
 import "../../../public/scss/dashboard.scss";
@@ -13,11 +12,6 @@ import "../../../public/scss/_dash.scss";
 import MainHeader from "../Reusables/MainHeader";
 import Footer from "../Reusables/Footer";
 
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`;
 
 /**
  * @desc renders home page
@@ -31,6 +25,11 @@ class Dashboard extends Component {
     this.props.fetch();
   };
 
+  getEntry = (e) => {
+    localStorage.setItem('currentId', e.currentTarget.dataset.id);
+    history.push('/view-entry');
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -38,13 +37,13 @@ class Dashboard extends Component {
         <div>
           <section id="boxes">
             {this.props.entries.entries.length ? (
-              this.props.entries.entries.reverse().map((entry, index) => (
+              this.props.entries.entries.map((entry, index) => (
                 <div className="container" id="box2" key={index}>
                   <div className="box2">
-                    <h4>${entry.title}</h4>
-                    <p> ${entry.content.substring(1, 50)}</p>
+                    <h4>{entry.title}</h4>
+                    <p> {entry.content.substring(1, 50)}</p>
                     <div className="recent">
-                      <button className="button_1" onClick={this.getEntry(entry.id)}>
+                      <button className="button_1" data-id={entry.id} onClick={this.getEntry}>
                         View
                       </button>
                     </div>

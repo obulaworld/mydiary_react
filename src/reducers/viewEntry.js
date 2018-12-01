@@ -1,37 +1,45 @@
 // modular importation
 import initialState from "../store/initialState";
 import {
-  DASHBOARD_SUCCESS,
-  DASHBOARD_FAILURE,
-  DASHBOARD_PROCESSING,
-} from "../action_types/dashboard"  ;
+  VIEW_SUCCESS,
+  VIEW_FAILURE,
+  VIEW_PROCESSING,
+  VIEW_ERROR_CLEARED
+} from "../action_types/viewEntry"  ;
+
 /**
- *
  * @param {object} state
  * @param {string} action
  * @desc sample of a rLOGIN
  */
-export const reducer = (state = initialState.entries, action) => {
+export const reducer = (state = initialState.entry, action) => {
   switch (action.type) {
-    case DASHBOARD_PROCESSING:
+    case VIEW_PROCESSING:
       return {
         ...state,
         processing: action.payload
       };
-    case DASHBOARD_SUCCESS:
+    case VIEW_SUCCESS:
       return {
         ...state,
         processing: false,
         message: action.payload.message,
         error: "",
-        entries: action.payload.entries
+        entry: action.payload.entry
       };
-    case DASHBOARD_FAILURE:
+    case VIEW_FAILURE:
       return {
         ...state,
         processing: false,
         message: '',
         error: action.payload.message
+      };
+    case VIEW_ERROR_CLEARED:
+      return {
+        ...state,
+        processing: false,
+        message: '',
+        error: ''
       };
     default:
       return state;

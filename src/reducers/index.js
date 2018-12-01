@@ -9,6 +9,7 @@ import login from "./login";
 import entries from "./dashboard";
 import profile from "./profile";
 import entry from "./createEntry";
+import viewEntry from './viewEntry';
 
 /**
  * @desc combines all the reducers
@@ -20,5 +21,6 @@ export default combineReducers({
   login,
   entries,
   profile,
-  entry
+  entry,
+  viewEntry
 });

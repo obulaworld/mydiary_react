@@ -2,15 +2,16 @@
 import { connect } from 'react-redux';
 
 // components
-import CreateEntry from '../../components/CreateEntry/CreateEntry';
+import ViewEntry from '../../components/ViewEntry/ViewEntry';
+
 
 // actions
-import { userCreateRequest } from '../../actions/createEntry';
+import { userViewRequest } from '../../actions/viewEntry';
 import { loaderOn } from '../../actions/toggleLoader';
 
 const mapDispatchToProps = dispatch => ({
-  createEntry: (details) => {
-    dispatch(userCreateRequest(details));
+  getEntry: () => {
+    dispatch(userViewRequest());
   },
   loaderOn: () => {
     dispatch(loaderOn());
@@ -19,10 +20,11 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  loading: state.loading
+  loading: state.loading,
+  entry: state.viewEntry.entry
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CreateEntry);
+)(ViewEntry);

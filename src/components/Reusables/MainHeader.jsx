@@ -26,9 +26,6 @@ class MainHeader extends Component {
                   <a href="/entry-add">Add Entry</a>
                 </li>
                 <li className="change1">
-                  <a href="/view-entry">View All Entries</a>
-                </li>
-                <li className="change1">
                   <a href="/profile">My Profile</a>
                 </li>
                 <li className="change1" onClick={this.handleLogout}>
