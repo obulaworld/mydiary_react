@@ -11,7 +11,7 @@ import reducer from "../dashboard";
 describe("DASHBOARD reducer", () => {
   it("should handle DASHBOARD_PROCESSING", () => {
     expect(
-      reducer({ processing:true }, {
+      reducer([], {
         type: DASHBOARD_PROCESSING,
         payload: true
       })
@@ -42,7 +42,7 @@ describe("DASHBOARD reducer", () => {
       )
     ).toEqual({
       processing: false,
-      message: "",
+      message: "Your request was successful",
       error: "",
       entries: [
         {
@@ -53,16 +53,15 @@ describe("DASHBOARD reducer", () => {
   });
   it("should handle DASHBOARD_FAILURE", () => {
     expect(
-      reducer({
-        processing: false,
-        error: "Failed to authenticate token"
-      }, {
+      reducer([], {
         type: DASHBOARD_FAILURE,
-        payload: "Failed to authenticate token"
+        payload: {
+          message: "Failed to authenticate token"}
       })
     ).toEqual({
       processing: false,
       error: "Failed to authenticate token",
+      message:''
     });
   });
 });

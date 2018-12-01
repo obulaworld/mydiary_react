@@ -45,7 +45,7 @@ class ViewEntry extends Component {
                 <a href="/dashboard">
                   <button>Back</button>
                 </a>
-                <a href="/dashboard">
+                <a href="/edit-entry">
                   <button>Edit</button>
                 </a>
               </div>

@@ -70,7 +70,7 @@ export const userCreateRequest = (details) => (dispatch) => {
     .then((payload) => {
       dispatch(createSuccess(payload.data));
       swal('Success','Your entry was successfully created', 'success' )
-      history.push(`/view-entry/${payload.data.entry[0].id}`);
+      history.push(`/view-entry`);
     })
     .catch((err) => {
       dispatch(loaderOff(false))
