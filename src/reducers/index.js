@@ -7,6 +7,7 @@ import auth from "./auth";
 import loading from './loading';
 import login from "./login";
 import entries from "./dashboard";
+import profile from "./profile"
 
 /**
  * @desc combines all the reducers
@@ -16,5 +17,6 @@ export default combineReducers({
   auth,
   loading,
   login,
-  entries
+  entries,
+  profile
 });

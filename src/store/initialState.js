@@ -22,6 +22,13 @@ const initialState = {
     message: "",
     entries: []
   },
+  profile:{
+    profile:{},
+    processing: false,
+    error: "",
+    message: "",
+    entries: []
+  },
   loading: {
     loading: false
   }
