@@ -7,7 +7,8 @@ import auth from "./auth";
 import loading from './loading';
 import login from "./login";
 import entries from "./dashboard";
-import profile from "./profile"
+import profile from "./profile";
+import entry from "./createEntry";
 
 /**
  * @desc combines all the reducers
@@ -18,5 +19,6 @@ export default combineReducers({
   loading,
   login,
   entries,
-  profile
+  profile,
+  entry
 });
