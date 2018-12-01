@@ -17,6 +17,7 @@ import Profile from '../containers/Profile/Profile';
 import CreateEntry from '../containers/CreateEntry/CreateEntry';
 import Logout from './Logout/Logout';
 import ViewEntry from '../containers/ViewEntry/ViewEntry';
+import EditEntry from '../containers/EditEntry/EditEntry';
 
 /**
  * @desc handles routing
@@ -33,6 +34,7 @@ const Routes = () => (
       <Route exact path='/view-entry' component={ViewEntry} />
       <AuthenticatedRoute exact path='/profile' component={Profile} />
       <AuthenticatedRoute exact path='/entry-add' component={CreateEntry} />
+      <AuthenticatedRoute exact path='/edit-entry' component={EditEntry} />
       <AuthenticatedRoute exact path='/dashboard' component={Dashboard} />
       <Route component={NotFound} />
     </Switch>
