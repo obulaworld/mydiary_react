@@ -40,7 +40,7 @@ class CreateEntry extends Component {
 
   onSubmit = event => {
     event.preventDefault();
-    this.setState({ loading: true });
+    this.props.loaderOn();
     const details = {
       title: this.state.title,
       category: this.state.category,
