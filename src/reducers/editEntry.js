@@ -5,7 +5,7 @@ import {
   EDIT_FAILURE,
   EDIT_PROCESSING,
   EDIT_ERROR_CLEARED
-} from "../action_types/login"  ;
+} from "../action_types/editEntry"  ;
 /**
  *
  * @param {object} state
