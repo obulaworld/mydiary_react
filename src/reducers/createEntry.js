@@ -5,7 +5,7 @@ import {
   CREATE_FAILURE,
   CREATE_PROCESSING,
   CREATE_ERROR_CLEARED
-} from "../action_types/login"  ;
+} from "../action_types/createEntry"  ;
 /**
  *
  * @param {object} state

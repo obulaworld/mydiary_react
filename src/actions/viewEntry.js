@@ -9,10 +9,6 @@ import {
   VIEW_ERROR_CLEARED,
 } from '../action_types/viewEntry';
 
-import history from '../history';
-
-import { authenticateUser } from '../actions/auth';
-
 /**
  * @param {object} data
  * @desc checking create loading
